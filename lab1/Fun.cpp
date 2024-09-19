@@ -17,15 +17,15 @@ string decimalToBinary(int num) {
     bitset<8> complement = ~(num + 1);
     string s = direct.to_string() + " " + inverse.to_string() + " " + complement.to_string();
 
-    cout << "Ïðÿìîé êîä: " << direct << endl;
-    cout << "Îáðàòíûé êîä: " << inverse << endl;
-    cout << "Äîïîëíèòåëüíûé êîä: " << complement << endl << endl;
+    cout << "ÃÃ°Ã¿Ã¬Ã®Ã© ÃªÃ®Ã¤: " << direct << endl;
+    cout << "ÃŽÃ¡Ã°Ã Ã²Ã­Ã»Ã© ÃªÃ®Ã¤: " << inverse << endl;
+    cout << "Ã„Ã®Ã¯Ã®Ã«Ã­Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© ÃªÃ®Ã¤: " << complement << endl << endl;
     return s;
 }
 
 string addComplementary(int num1, int num2) {
     int sum = num1 + num2;
-    cout << "Ðåçóëüòàò: " << sum << endl;
+    cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã²: " << sum << endl;
     string s = to_string(sum) + " " + decimalToBinary(sum);
     return s;
 }
@@ -38,21 +38,21 @@ string subtractComplementary(int num1, int num2) {
 
 string multiplyDirect(int num1, int num2) {
     int product = num1 * num2;
-    cout << "Ïðîèçâåäåíèå: " << product << endl;
+    cout << "ÃÃ°Ã®Ã¨Ã§Ã¢Ã¥Ã¤Ã¥Ã­Ã¨Ã¥: " << product << endl;
     string s = to_string(product) + " " + decimalToBinary(product);
     return s;
 }
 
 string divideDirect(int num1, int num2) {
     double quotient = static_cast<double>(num1) / num2;
-    cout << "Ðåçóëüòàò: " << fixed << setprecision(5) << quotient << endl;//òî÷íîñòü 5 çíàêîâ
+    cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã²: " << fixed << setprecision(5) << quotient << endl;//Ã²Ã®Ã·Ã­Ã®Ã±Ã²Ã¼ 5 Ã§Ã­Ã ÃªÃ®Ã¢
     string s = to_string(quotient);
     return s;
 }
 
 string addFloatingPoint(float num1, float num2) {
     float sum = num1 + num2;
-    cout << "Ðåçóëüòàò: " << sum << endl;
+    cout << "ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã²: " << sum << endl;
     string s = to_string(sum) + " " + decimalToBinary(*reinterpret_cast<int*>(&sum));// IEEE-754
     return s;
 }
